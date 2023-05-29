@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cálculo de duração de viagem</title>
+</head>
+    <style>
+        /* Estilos CSS aqui */
+        body {
+            background-image: url(https://i.ytimg.com/vi/d-GgZpCtBXw/maxresdefault.jpg);
+        }
+    h2 {
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 20px;
+        width: 40%;
+        background-color: rgb(224, 224, 244);
+    }
+    label {
+        color: white;
+        padding: 5px;
+        border-radius: 7px;
+        font-size: 14px;
+        width: 25;
+        background-color: rgb(238, 83, 17);
+
+    }
+    p {
+        color: rgb(11, 11, 11);
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14x;
+        width: 19%;
+        background-color: rgb(248, 247, 251);
+    }
+    </style>
+<body>
+    <center<h2>Cálculo de duração de viagem</h2></center>
+
+    <center> <label for="dias">Número de dias:</label> </center> 
+
+     <center><input type="number" id="dias"></center> 
+   
+     <center><label for="horas">Número de horas:</label></center> 
+    <center><input type="number" id="horas"></center> 
+   
+   <center><button onclick="calcularDuracao()">Calcular</button></center> 
+   
+    <center><p id="resultado"></p></center> 
+
+
+  <script>
+    function calcularDuracao() {
+      var dias = parseInt(document.getElementById("dias").value);
+      var horas = parseInt(document.getElementById("horas").value);
+
+      var totalHoras = (dias * 24) + horas;
+
+      document.getElementById("resultado").innerText = "Total de horas: " + totalHoras;
+    }
+  </script>
+
+</body>
+</html>
